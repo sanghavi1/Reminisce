@@ -8,11 +8,11 @@ if [ ! -e "$CD" ]; then
   	exit
 fi
 
-$CD bubble --title "Message Opener" --text "Launching Application" --x-placement "center" --y-placement "center"
+$CD bubble --title "Reminisce" --text "Launching Application" --x-placement "center" --y-placement "center"
 
 cd ~/Library/Messages/Archive
 
-dates=`$CD standard-inputbox --title "Message Opener" --informative-text "Enter a date in year-month-date format" --text "Example: 2015-09-05" --float | tail -n +2`
+dates=`$CD standard-inputbox --title "Reminisce" --informative-text "Enter a date in year-month-date format" --text "Example: 2015-09-05" --float | tail -n +2`
 if [ ! -d "$dates" ]; then
 	echo "This date does not exist in your messages"
   	exit
@@ -33,7 +33,7 @@ echo "Canceling"
 exit
 fi
 
-name=`$CD standard-inputbox --title "Message Opener" --informative-text "Please enter a name" --text "Example: John" --float | tail -n +2`
+name=`$CD standard-inputbox --title "Reminisce" --informative-text "Please enter a name" --text "Example: John" --float | tail -n +2`
 
 for file in *$name*; do
 	open "$file"
